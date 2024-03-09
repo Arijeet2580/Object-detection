@@ -18,19 +18,17 @@ def click_event(event, x, y, flags, param):
         cv.imshow('image', img)
 
 
-def rescale(frame, scale=0.5):
+def rescale(frame, scale=0.1):
     width = int(frame.shape[1] * scale)
     height = int(frame.shape[0] * scale)
     dimensions = (width, height)
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
-img = cv.imread('img.jpg')
+img = cv.imread('img/img.jpg')
 img = rescale(img)
 
-a=input("Enter y if you want to copy")
-if a=='y':
-    tv= img[540:648,257:333]
-    img[289:397,134:210] = tv
+tv= img[42:98,52:166]
+img[127:183,193:307] = tv
 
 cv.imshow("image", img)
 

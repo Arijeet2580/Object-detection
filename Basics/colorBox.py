@@ -17,6 +17,7 @@ while(1):
     k=cv.waitKey(1) & 0xFF
     if(k==32):   #Click space to Escape
         break
+    
     b=cv.getTrackbarPos('B','image')
     g=cv.getTrackbarPos('G','image')
     r=cv.getTrackbarPos('R','image')

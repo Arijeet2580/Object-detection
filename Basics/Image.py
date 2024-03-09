@@ -1,5 +1,4 @@
 import cv2 as cv
-import numpy as np
 
 def rescale(frame, scale=0.2):
     width = int(frame.shape[1] * scale)
@@ -7,10 +6,12 @@ def rescale(frame, scale=0.2):
     dimensions = (width, height)
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
-img = cv.imread('img.jpg')
+img = cv.imread('img/img.jpg')
 img= rescale(img)
-print(img)
 
 cv.imshow('Window', img)
 cv.waitKey(0)
 cv.destroyAllWindows()
+choice= input ("Do you want to see the Numpy Array of the Image:(y/n) ")
+if(choice=="y"):
+    print(img)
