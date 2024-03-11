@@ -134,5 +134,7 @@ GitHub Link: https://github.com/Arijeet2580/Object-detection
 3. https://johnallen.github.io/opencv-object-detection-tutorial/
 4. https://machinelearningmastery.com/training-a-haar-cascade-object-detector-in-opencv/
 5. https://www.analyticsvidhya.com/blog/2022/04/object-detection-using-haar-cascade-opencv/
+6. https://github.com/opencv/opencv/tree/4.x/data/haarcascades
+7. https://github.com/benjamrio/sort-it/blob/main/detection/haarcascade_detection.py
 
 
