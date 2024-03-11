@@ -9,7 +9,6 @@ This machine learning approach facilitates the detection of objects by analyzing
 
 ### The Code developed is general to be used with any classifiers:
 Ease with Adaptability with the Plastic Data model from the Project of the Face Detection
-	      Link: Object-detection/Face Detection/FDVideo.py at main · Arijeet2580/Object-detection (github.com)
 
 
 1. The Above code is flexible to be used with any classifier with Little bit Modification.
