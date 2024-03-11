@@ -15,20 +15,72 @@ Ease with Adaptability with the Plastic Data model from the Project of the Face 
 	
 2. Working on Image contours for Further Improvisation of the Data Model 
 
-<code>
-	img=cv.imread('image/path.jpg')
-</code>
-- It allows to read Images from file path as Arguement
+### Reading Images
+
+```
+img=cv.imread('image/path.jpg')
+```
+
+- It allows to read Images from file path as Arguements
 - If Image loading is Succesful returns a Numpy Array
 - If Image loading is Unsuccesful returns none
 
-<code>
-	cv.imshow('Window',img)
-</code>
+```
+cv.imshow('Window',img)
+```
 
 - Used to Display an Image in a window.
 - Takes Arguement Window name and image to be displayed
-  
+
+
+```
+	cv.waitKey(0)
+	k=cv.waitKey(0) & 0xFF 
+	if (k== ord('d')){
+		break
+	}
+	cv.destroyAllWindows()
+```
+
+
+- "0" arguement represents infinite delay
+- Makes window to be remain open until the user presses any key
+- returns ASCII code it can be made so that when clicked the specified key it will move to next Line
+- ord('d') returns ASCII Code of the character 'd'
+- Destroy Function deletes or closes all the Window Present.
+
+
+### Reading Video
+
+```
+capture=cv.VideoCapture('path.mp4')
+while capture.isOpened():
+	isTrue,frame = capture.read()
+	cv.imshow('Video',frame)
+	if(cv.waitKey(0) & 0xFF == ord('q'))
+		break
+capture.release()
+cv.destroyAllWindows()
+```
+
+- VideoCapture function takes the Arguement as Video Path or 0 that means reference to Laptop Webcam
+- isOpened returns True if Reference is taken properly
+- Reads the Video in Small bits of Image in While loop till its True
+- Stops the Video Display when the Ord('q') is clicked
+
+* Problem :
+1. Gives -215 Assertion Error, It means it ran out of the Frames from the Video 
+	To Solve this:
+```
+	if  not isTrue is none:
+		print('Video Ended')
+		break
+	cv.imshow('Video',frame)
+	if(cv.waitKey(20) & 0xFF == ord('q')):
+		break
+	
+```	
+
 
 ### Problem:
 Stuck in Finding useful pre-trained haar cascade model for the Plastic Detection
