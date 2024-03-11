@@ -15,6 +15,9 @@ Ease with Adaptability with the Plastic Data model from the Project of the Face 
 	
 2. Working on Image contours for Further Improvisation of the Data Model 
 
+## Basic Problems and Solutions that can be faced by Beginners
+
+
 ### Reading Images
 
 ```
@@ -80,6 +83,24 @@ cv.destroyAllWindows()
 		break
 	
 ```	
+### Resizing and Rescaling Frames
+
+1. Frame.shape[1] = Actual Width of the Frame
+2. Frame.shape[0] = Actual height of the Frame
+
+```
+	def rescale(frame,scale):
+		width=int(frame.shape[1]*scale)
+		height=int(frame.shape[0]*scale)
+		dimensions=(width,height)
+		return cv.resize(frame,dimensions,interpolation=cv.INTER_AREA)
+```
+
+1. resize Function takes arguement for frames, dimensions in tuples and Interpolation(Optional Arguement) used to construct new data points within the range of tje discrete set of Known data points
+
+2. cv.INTER_AREA: Refers to resampling using pixel Area relation
+
+
 
 
 ### Problem:
