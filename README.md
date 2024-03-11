@@ -15,12 +15,24 @@ Ease with Adaptability with the Plastic Data model from the Project of the Face 
 	
 2. Working on Image contours for Further Improvisation of the Data Model 
 
+<code>
+	img=cv.imread('image/path.jpg')
+</code>
+- It allows to read Images from file path as Arguement
+- If Image loading is Succesful returns a Numpy Array
+- If Image loading is Unsuccesful returns none
+
+<code>
+	cv.imshow('Window',img)
+</code>
+
+- Used to Display an Image in a window.
+- Takes Arguement Window name and image to be displayed
+  
 
 ### Problem:
 Stuck in Finding useful pre-trained haar cascade model for the Plastic Detection
 If we are  to go for Custom trained Model it will take a huge data barrier to pass on  Because without a vast amount of data needed it will not be useful for proper detection.
- 
-
 
 GitHub Link : Added all my projects done in Object Detection in One Link From Basic Project to the General Haar Cascade Project done on Face detection which Can be further modified to set as a General Object Detection Model
 
