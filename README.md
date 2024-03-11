@@ -6,6 +6,21 @@ It relies on Haar-like features and employs a cascade classifier comprising mult
 
 This machine learning approach facilitates the detection of objects by analyzing image features and patterns.
 
+```
+face=cv.CascadeClassifier('Data.xml')
+gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)  
+faces=face_cascade.detectMultiScale(gray,1.1,4)
+# faces=face.detectMultiScale(image,scaleFactor,minNeighbours)
+```
+1. DetectMultiScale() Function takes Gray Image , scaleFactor and MinNeighbours
+
+- Gray takes the Gray Scale Image that can be changed using cvtColor function that changes BGR image to GrayScale Image.
+
+- (1.1)ScaleFactor specifies how much Image size is reduced at each Image scale
+
+- (4)MinNeighbours specifies how many neighbours each candidate rectangle should be retained.
+
+
 
 ### The Code developed is general to be used with any classifiers:
 Ease with Adaptability with the Plastic Data model from the Project of the Face Detection
