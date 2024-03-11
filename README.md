@@ -24,7 +24,8 @@ If we are  to go for Custom trained Model it will take a huge data barrier to pa
 
 GitHub Link : Added all my projects done in Object Detection in One Link From Basic Project to the General Haar Cascade Project done on Face detection which Can be further modified to set as a General Object Detection Model
 
-Arijeet2580/Object-detection (github.com)
+GitHub Link: https://github.com/Arijeet2580/Object-detection
+
 
 
 ### References
