@@ -6,7 +6,7 @@ It relies on Haar-like features and employs a cascade classifier comprising mult
 
 This machine learning approach facilitates the detection of objects by analyzing image features and patterns.
 
-```
+```terminal
 face=cv.CascadeClassifier('Data.xml')
 gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)  
 faces=face_cascade.detectMultiScale(gray,1.1,4)
@@ -35,7 +35,7 @@ Ease with Adaptability with the Plastic Data model from the Project of the Face 
 
 ### Reading Images
 
-```
+```terminal
 img=cv.imread('image/path.jpg')
 ```
 
@@ -43,7 +43,7 @@ img=cv.imread('image/path.jpg')
 - If Image loading is Succesful returns a Numpy Array
 - If Image loading is Unsuccesful returns none
 
-```
+```terminal
 cv.imshow('Window',img)
 ```
 
@@ -51,7 +51,7 @@ cv.imshow('Window',img)
 - Takes Arguement Window name and image to be displayed
 
 
-```
+```terminal
 	cv.waitKey(0)
 	k=cv.waitKey(0) & 0xFF 
 	if (k== ord('d')){
@@ -70,7 +70,7 @@ cv.imshow('Window',img)
 
 ### Reading Video
 
-```
+```terminal
 capture=cv.VideoCapture('path.mp4')
 while capture.isOpened():
 	isTrue,frame = capture.read()
@@ -89,8 +89,8 @@ cv.destroyAllWindows()
 * Problem :
 1. Gives -215 Assertion Error, It means it ran out of the Frames from the Video 
 	To Solve this:
-```
-	if  not isTrue is none:
+```terminal
+	if not isTrue:
 		print('Video Ended')
 		break
 	cv.imshow('Video',frame)
@@ -103,7 +103,7 @@ cv.destroyAllWindows()
 1. Frame.shape[1] = Actual Width of the Frame
 2. Frame.shape[0] = Actual height of the Frame
 
-```
+```terminal
 	def rescale(frame,scale):
 		width=int(frame.shape[1]*scale)
 		height=int(frame.shape[0]*scale)
